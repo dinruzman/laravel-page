@@ -26,22 +26,25 @@
             .nav-item:hover { background: #1947ee; }
             .account-link:hover { background: #3d68ff; }
         </style>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body class="font-sans antialiased bg-gray-100 flex">
 
             @include('sidebar')
 
         <div class="w-full flex flex-col h-screen overflow-y-scroll">
-            @livewire('navigation-menu')
 
         <!-- Page Heading -->
 {{--            @if (isset($header))--}}
 {{--                <header class="bg-white shadow">--}}
-{{--                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">--}}
+{{--                    <div class="py-6 px-4 sm:px-6 lg:px-8 text-2xl">--}}
 {{--                        {{ $header }}--}}
 {{--                    </div>--}}
 {{--                </header>--}}
 {{--            @endif--}}
+
+            @livewire('navigation-menu-two',['header' => $header])
 
         <!-- Page Content -->
             <main>
